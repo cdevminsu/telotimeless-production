@@ -1,0 +1,21 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+.env
+media/
+
+# Node.js / Next.js
+node_modules/
+.next/
+out/
+
+# Docker
+*.pid
+*.log
+
+# System / Editor
+.DS_Store
+.idea/
+.vscode/

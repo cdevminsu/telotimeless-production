@@ -1,0 +1,26 @@
+[project]
+name = "telotimeless-backend"
+version = "0.1.0"
+description = "Telotimeless Django backend"
+authors = [
+    { name = "ethan" }
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.13"  # ← Docker가 Python 3.10이므로 최소/최대 지정
+dependencies = [
+    "django >=5.2.3,<6.0.0",
+    "djangorestframework >=3.16.0,<4.0.0",
+    "psycopg2-binary >=2.9.10,<3.0.0",
+    "django-cors-headers >=4.7.0,<5.0.0",
+    "drf-yasg (>=1.21.10,<2.0.0)",
+    "pillow (>=11.2.1,<12.0.0)",
+    "django-modeltranslation (>=0.19.15,<0.20.0)",
+    "django-markdownx (>=4.0.9,<5.0.0)",
+    "django-ckeditor (>=6.7.3,<7.0.0)"
+]
+
+# package-mode = false  # 선택사항 (Poetry 1.8 이상일 경우만 인식)
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
