@@ -23,3 +23,35 @@ This production repository includes:
 
 ## 🗂️ Project Structure
 
+telotimeless/
+├── backend/ # Django REST API
+├── frontend/ # Next.js frontend
+├── db/ # PostgreSQL Docker config
+├── media/ # User-uploaded files (ignored in Git)
+├── docker-compose.yml
+└── README.md
+
+yaml
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js** + **React** + **Sass**
+- **Django REST Framework**
+- **PostgreSQL**
+- **Docker** / **Docker Compose**
+- **Poetry** (Python dependency manager)
+
+---
+
+## 📦 Installation (Local Development)
+
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/telotimeless-production.git
+cd telotimeless-production
+
+# Build and run with Docker
+docker-compose up --build
+
+---
