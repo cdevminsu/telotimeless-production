@@ -6,8 +6,9 @@ import BannerSectionStyle9 from "../../../components/Section/BannerSection/Banne
 import Spacing from "../../../components/Spacing";
 import Post from "../../../components/Post";
 import Sidebar from "../../../components/Sidebar";
-import axios from "axios";
 import { cookies } from "next/headers";
+import API_BASE_URL from "../../../lib/apiClient";
+import axios from "axios";
 
 const relatedBlog = [
   {
@@ -49,25 +50,24 @@ const categoryData = [
     url: "https://www.youtube.com/watch?v=bHgo_7HkzNM",
   },
 ];
-async function getHospital(slug, language = "ko") {
+export async function getHospital(slug, language = "ko") {
   try {
-    const res = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/hospitals/${slug}`,
-      {
-        headers: {
-          "Accept-Language": language,
-        },
-      }
-    );
+    const res = await axios.get(`${API_BASE_URL}/hospitals/${slug}`, {
+      headers: {
+        "Accept-Language": language,
+      },
+    });
 
-    const data = res.data;
-    return data || null; // 병원이 없을 경우 null 반환
+    return res.data || null;
   } catch (err) {
-    console.error("병원 정보 불러오기 실패:", err);
+    console.error("병원 정보 불러오기 실패:", {
+      message: err.message,
+      status: err.response?.status,
+      data: err.response?.data,
+    });
     return null;
   }
 }
-
 export default async function HospitalDetail({ params }) {
   const cookieStore = cookies();
   const lang = cookieStore.get("lang")?.value || "ko";

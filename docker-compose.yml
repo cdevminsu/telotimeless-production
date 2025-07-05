@@ -11,8 +11,7 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    restart: 
-      unless-stopped
+    restart: unless-stopped
 
   backend:
     build: ./backend
@@ -29,13 +28,13 @@ services:
       DB_PASSWORD: postgres
       DB_HOST: db
       DB_PORT: 5432
-    restart: 
-     unless-stopped
     env_file:
       - ./backend/.env
+    restart: unless-stopped
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
     volumes:
       - ./frontend:/app
     ports:
@@ -43,9 +42,10 @@ services:
     depends_on:
       - backend
     environment:
-      NEXT_PUBLIC_API_URL: http://localhost:8000/api
-    restart: 
-     unless-stopped
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:8000/api   # 브라우저에서 사용
+      INTERNAL_API_BASE_URL: http://backend:8000/api        # SSR (서버사이드 렌더링)에서 사용
+    restart: unless-stopped
+    command: npm run dev
 
 volumes:
   postgres_data:

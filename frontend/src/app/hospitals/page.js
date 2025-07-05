@@ -23,7 +23,7 @@ export default function Blog() {
   useEffect(() => {
     if (!lang) return;
     axios
-      .get(`${process.env.NEXT_PUBLIC_API_URL}/hospitals/`, {
+      .get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/hospitals/`, {
         headers: {
           "Accept-Language": lang,
         },
