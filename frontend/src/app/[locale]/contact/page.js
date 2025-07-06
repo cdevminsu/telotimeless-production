@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import BannerSectionStyle5 from "../../components/Section/BannerSection/BannerSectionStyle5";
-import ContactForm from "../../components/ContactForm";
-import Section from "../../components/Section";
-import ContactInfoSection from "../../components/Section/ContactInfoSection";
+import BannerSectionStyle5 from "@/components/Section/BannerSection/BannerSectionStyle5";
+import ContactForm from "@/components/ContactForm";
+import Section from "@/components/Section";
+import ContactInfoSection from "@/components/Section/ContactInfoSection";
 import Head from "next/head";
 
 export default function Contact() {

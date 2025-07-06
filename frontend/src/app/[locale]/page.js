@@ -1,14 +1,16 @@
 "use client";
-import Hero from "../components/Hero";
-import AboutSection from "../components/Section/AboutSection";
-import BrandsSection from "../components/Section/BrandsSection";
-import Banner from "../components/Section/BannerSection";
-import Section from "../components/Section";
-import FeaturesSection from "../components/Section/FeaturesSection";
-import TestimonialSection from "../components/Section/TestimonialSection";
-import FaqSection from "../components/Section/FaqSection";
-import DepartmentSection from "../components/Section/DepartmentSection";
+import Hero from "../../components/Hero";
+import AboutSection from "../../components/Section/AboutSection";
+import BrandsSection from "../../components/Section/BrandsSection";
+import Banner from "../../components/Section/BannerSection";
+import Section from "../../components/Section";
+import FeaturesSection from "../../components/Section/FeaturesSection";
+import TestimonialSection from "../../components/Section/TestimonialSection";
+import FaqSection from "../../components/Section/FaqSection";
+import DepartmentSection from "../../components/Section/DepartmentSection";
 import Head from "next/head";
+import { useTranslations } from "next-intl";
+
 const featureListData = [
   {
     iconSrc: `/images/home_1/compassion.svg`,
@@ -85,53 +87,54 @@ const departmentData = [
   {
     title: "Total Plastic Surgery",
     iconUrl: `/images/home_1/1.png`,
-    href: "departments/department-details",
+    href: "/about-detail",
   },
   {
     title: "Partial Plastic Surgery",
     iconUrl: `/images/home_1/2.png`,
-    href: "departments/department-details",
+    href: "/about-detail",
   },
   {
     title: "Dermatology & Aesthetic",
     iconUrl: `/images/home_1/3.png`,
-    href: "departments/department-details",
+    href: "/about-detail",
   },
   {
     title: "Spine & Joint",
     iconUrl: `/images/home_1/4.png`,
-    href: "departments/department-details",
+    href: "/about-detail",
   },
   {
     title: "Cardiology & Ophthalmology",
     iconUrl: `/images/home_1/5.png`,
-    href: "departments/department-details",
+    href: "/about-detail",
   },
   {
     title: "Health Checkups",
     iconUrl: `/images/home_1/6.png`,
-    href: "departments/department-details",
+    href: "/about-detail",
   },
   {
     title: "Cancer Treatment",
     iconUrl: `/images/home_1/7.png`,
-    href: "departments/department-details",
+    href: "/about-detail",
   },
   {
     title: "Stem Cell Therapy",
     iconUrl: `/images/home_1/8.png`,
-    href: "departments/department-details",
+    href: "/about-detail",
   },
 ];
 
 export default function Home() {
+  const t = useTranslations();
   return (
     <>
       <Head>
         <title>Home | TeloTimeless</title>
       </Head>
       <Hero
-        title="Your partner in curated health care"
+        title={t("Home.title")}
         subTitle="We are committed to connecting you with Korea's top medical experts, offering tailored care and travel support for a safe, smooth healing journey."
         bgUrl={`/images/home_1/hero_bg.jpeg`}
         imgUrl={`/images/home_1/hero_img.png`}
@@ -158,6 +161,7 @@ export default function Home() {
         btnUrl="/"
       />
       {/* Start Feature Section */}
+      <h1>{t("Home.title")}</h1>
       <Section
         topMd={185}
         topLg={140}

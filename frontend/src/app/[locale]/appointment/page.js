@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import BannerSectionStyle3 from "../../components/Section/BannerSection/BannerSectionStyle3";
-import AppointmentWithContactInfoSection from "../../components/Section/AppointmentWithContactInfoSection";
-import Section from "../../components/Section";
+import BannerSectionStyle3 from "@/components/Section/BannerSection/BannerSectionStyle3";
+import AppointmentWithContactInfoSection from "@/components/Section/AppointmentWithContactInfoSection";
+import Section from "@/components/Section";
 import Head from "next/head";
 
 export default function Appointments() {

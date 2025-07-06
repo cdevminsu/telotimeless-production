@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import BannerSectionStyle7 from "../../components/Section/BannerSection/BannerSectionStyle7";
-import Section from "../../components/Section";
-import AppointmentSection from "../../components/Section/AppointmentSection";
-import AboutSectionStyle2 from "../../components/Section/AboutSection/AboutSectionStyle2";
-import FeaturesSectionStyle3 from "../../components/Section/FeaturesSection/FeaturesSectionStyle3";
+import BannerSectionStyle7 from "@/components/Section/BannerSection/BannerSectionStyle7";
+import Section from "@/components/Section";
+import AppointmentSection from "@/components/Section/AppointmentSection";
+import AboutSectionStyle2 from "@/components/Section/AboutSection/AboutSectionStyle2";
+import FeaturesSectionStyle3 from "@/components/Section/FeaturesSection/FeaturesSectionStyle3";
 import Head from "next/head";
 
 const featureData = [

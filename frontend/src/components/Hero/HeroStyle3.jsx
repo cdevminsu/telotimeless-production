@@ -1,5 +1,7 @@
-import { Icon } from '@iconify/react';
-import React from 'react';
+"use client";
+
+import { Icon } from "@iconify/react";
+import React from "react";
 
 export default function HeroStyle3({
   title,

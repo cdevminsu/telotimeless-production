@@ -1,3 +1,4 @@
+'use client";';
 import TextWidget from "../Widget/TextWidget";
 import ContactInfoWidget from "../Widget/ContactInfoWidget";
 import SocialWidget from "../Widget/SocialWidget";

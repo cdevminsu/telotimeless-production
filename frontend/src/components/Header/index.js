@@ -7,12 +7,19 @@ import Newsletter from "../Widget/Newsletter";
 import IconBoxStyle11 from "../IconBox/IconBoxStyle11";
 import Spacing from "../Spacing";
 import LanguageDropdown from "./LanguageDropdown";
+import { useLocale } from "next-intl";
 
 export default function Header({ logoSrc = "/images/logo.svg", variant }) {
   const [isSticky, setIsSticky] = useState(false);
   const [mobileToggle, setMobileToggle] = useState(false);
   const [sideNav, setSideNav] = useState(false);
   const [searchToggle, setSearchToggle] = useState(false);
+  const locale = useLocale();
+
+  useEffect(() => {
+    // ✅ Bootstrap JS를 클라이언트에서만 import
+    import("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,13 +50,16 @@ export default function Header({ logoSrc = "/images/logo.svg", variant }) {
                     }
                   >
                     <li className="menu-item">
-                      <Link href="/" onClick={() => setMobileToggle(false)}>
+                      <Link
+                        href={`/${locale}`}
+                        onClick={() => setMobileToggle(false)}
+                      >
                         Home
                       </Link>
                     </li>
                     <li className="menu-item">
                       <Link
-                        href="/about"
+                        href={`/${locale}/about`}
                         onClick={() => setMobileToggle(false)}
                       >
                         About
@@ -57,7 +67,7 @@ export default function Header({ logoSrc = "/images/logo.svg", variant }) {
                     </li>
                     <li className="menu-item">
                       <Link
-                        href="/hospitals"
+                        href={`/${locale}/hospitals`}
                         onClick={() => setMobileToggle(false)}
                       >
                         Hospitals
@@ -65,7 +75,7 @@ export default function Header({ logoSrc = "/images/logo.svg", variant }) {
                     </li>
                     <li className="menu-item">
                       <Link
-                        href="/appointment"
+                        href={`/${locale}/appointment`}
                         onClick={() => setMobileToggle(false)}
                       >
                         Appointment
@@ -73,7 +83,7 @@ export default function Header({ logoSrc = "/images/logo.svg", variant }) {
                     </li>
                     <li className="menu-item">
                       <Link
-                        href="/contact"
+                        href={`/${locale}/contact`}
                         onClick={() => setMobileToggle(false)}
                       >
                         Contact

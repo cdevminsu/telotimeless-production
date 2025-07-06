@@ -1,15 +1,15 @@
 "use client";
 
 import React from "react";
-import BannerSectionStyle3 from "../../components/Section/BannerSection/BannerSectionStyle3";
-import BannerSectionStyle4 from "../../components/Section/BannerSection/BannerSectionStyle4";
-import Section from "../../components/Section";
-import DepartmentSectionStyle2 from "../../components/Section/DepartmentSection/DepartmentSectionStyle2";
-import FeaturesSectionStyle2 from "../../components/Section/FeaturesSection/FeaturesSectionStyle2";
-import FunFactSection from "../../components/Section/FunFactSection";
-import TeamSection from "../../components/Section/TeamSection";
-import GallerySection from "../../components/Section/GallerySection";
-import AwardSectionStyle2 from "../../components/Section/AwardSection/AwardSectionStyle2";
+import BannerSectionStyle3 from "@/components/Section/BannerSection/BannerSectionStyle3";
+import BannerSectionStyle4 from "@/components/Section/BannerSection/BannerSectionStyle4";
+import Section from "@/components/Section";
+import DepartmentSectionStyle2 from "@/components/Section/DepartmentSection/DepartmentSectionStyle2";
+import FeaturesSectionStyle2 from "@/components/Section/FeaturesSection/FeaturesSectionStyle2";
+import FunFactSection from "@/components/Section/FunFactSection";
+import TeamSection from "@/components/Section/TeamSection";
+import GallerySection from "@/components/Section/GallerySection";
+import AwardSectionStyle2 from "@/components/Section/AwardSection/AwardSectionStyle2";
 import Head from "next/head";
 const departmentData = [
   {
